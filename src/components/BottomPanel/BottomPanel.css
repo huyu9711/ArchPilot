@@ -1,0 +1,156 @@
+.bottom-panel {
+  position: relative;
+  background-color: #1e1e1e;
+  border-top: 1px solid #3c3c3c;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.resize-handle {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  cursor: ns-resize;
+  z-index: 10;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #252526;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.panel-tabs {
+  display: flex;
+}
+
+.panel-tab {
+  padding: 8px 16px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8a8a8a;
+  border-right: 1px solid #3c3c3c;
+}
+
+.panel-tab.active {
+  color: #ffffff;
+  background-color: #1e1e1e;
+  border-top: 1px solid #007acc;
+  margin-top: -1px;
+}
+
+.panel-tab:hover:not(.active) {
+  color: #ffffff;
+}
+
+.panel-actions {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.panel-action-button {
+  background: none;
+  border: none;
+  color: #8a8a8a;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.panel-action-button:hover {
+  color: #ffffff;
+}
+
+.panel-content {
+  flex: 1;
+  overflow: auto;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Terminal styles */
+.terminal-content {
+  padding: 8px;
+  color: #cccccc;
+  background-color: #1e1e1e;
+  height: 100%;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+}
+
+/* Problems styles */
+.problems-content {
+  padding: 8px;
+  height: 100%;
+}
+
+.problems-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.problem-item {
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.problem-type {
+  width: 20px;
+  padding: 4px;
+  text-align: center;
+}
+
+.problem-message {
+  padding: 4px 8px;
+  color: #cccccc;
+}
+
+.problem-location {
+  padding: 4px 8px;
+  color: #8a8a8a;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.error {
+  color: #f48771;
+}
+
+.warning {
+  color: #cca700;
+}
+
+.no-problems {
+  padding: 16px;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+/* Output styles */
+.output-content {
+  padding: 8px;
+  color: #cccccc;
+  height: 100%;
+}
+
+.output-line {
+  white-space: pre-wrap;
+}
+
+.output-warning {
+  color: #cca700;
+}
+
+.output-error {
+  color: #f48771;
+}
